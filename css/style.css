@@ -1,0 +1,186 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: rgba(18,18,18,0.9);
+    --red: #EE022B;
+    --white: #ffffff;
+    --grey: #727273;
+}
+
+html {
+    font-family: 'Raleway', sans-serif
+}
+
+a {
+    text-decoration: none;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0px;
+}
+
+h1::first-letter {
+    font-size: 3rem;
+    color: var(--red);
+}
+
+.red-button {
+    display: inline-block;
+    width: 160px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: var(--red);
+    color: var(--white);
+    text-align: center;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.red-button:hover {
+    background-color: var(--white);
+    color: var(--red);
+}
+
+.topbar {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+}
+
+.topbar h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.topbar .menu ul {
+    list-style-type: none;
+}
+
+.topbar .menu li {
+    display: inline-block;
+    margin-left: 1.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+}
+.topbar .menu a {
+    display: inline-block;
+    color: var(--white);
+    text-align: center;
+    border-radius: 20px;
+    width: 125px;
+    height: 40px;
+    line-height: 2.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.topbar .menu a:hover {
+    background-color: var(--red);
+}
+
+.banner {
+    background: url('../images/burger-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+}
+
+.banner .presentation {
+    padding: 15vh 80px;
+    width: 750px;
+}
+
+.banner .presentation h3 {
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+
+.banner .presentation h2 {
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 5.6rem;
+    margin-top: 15px;
+    font-family: 'Raleway', 'Montserrat', sans-serif;
+}
+
+.banner .presentation .price {
+    color: var(--grey);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-top: 15px;
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+.banner .presentation .description {
+    color: var(--white);
+    font-size: 1rem;
+    margin: 15px 0 30px 0;
+}
+
+.related-products h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+.related-products {
+    margin-bottom: 3rem;
+}
+.products {
+    display: flex;
+    text-align: center;
+}
+
+.products .product h3{
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.products .product p{
+    margin: 20px 0;
+    font-family: 'Maven Pro';
+}
+
+.products .product .price {
+    color: var(--red);
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.map {
+    background-color: var(--black);
+}
+
+.footer {
+    background-color: var(--black);
+    text-align: center;
+    color: var(--white);
+    padding: 50px 0;
+    font-family: 'Maven Pro';
+}
+
+.footer h1 {
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: small;
+}

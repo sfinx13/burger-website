@@ -331,7 +331,15 @@ p {
         width: 90%;
     }
 
-    .topbar h1{
+    .topbar .menu li {
+        margin-left: 0.1rem;
+    }
+
+    .topbar .menu a {
+        width: 120px;
+    }
+
+    .topbar h1 span{
         display: none;
     }
 
@@ -345,38 +353,12 @@ p {
 }
 
 @media screen and (max-width: 825px) {
-    .topbar {
-        display: none;
-    }
-
     .contact-us .container {
         flex-direction: column;
     }
 
     .banner {
         height: 70vh;
-    }
-}
-
-@media screen and (max-width: 725px) {
-    :root {
-        --margin-side: 20px;
-    }
-
-    html {
-        font-size: 12px;
-    }
-
-    .topbar {
-        display: none;
-    }
-
-    .banner .presentation {
-        padding: 8vh var(--margin-side);
-    }
-
-    .banner .presentation .description {
-        width: 300px;
     }
 
     .about-us .about-us-item {
@@ -391,6 +373,28 @@ p {
 
     .about-us .about-us-item img{
         display: none;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    :root {
+        --margin-side: 20px;
+    }
+
+    html {
+        font-size: 12px;
+    }
+    
+    .topbar {
+        display: none;
+    }
+
+    .banner .presentation {
+        padding: 8vh var(--margin-side);
+    }
+
+    .banner .presentation .description {
+        width: 300px;
     }
 
     .product {

@@ -7,27 +7,46 @@
 :root {
     --black: rgba(18,18,18,0.9);
     --red: #EE022B;
+    --lightred: rgba(255,0,0,0.7);
     --white: #ffffff;
     --grey: #727273;
+    --margin-side: 160px;
 }
 
 html {
-    font-family: 'Raleway', sans-serif
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
 }
 
-iframe {
-    width: 100%;
-    height: 300px;
-    border: 0px;
+h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
 }
 
 h1::first-letter {
     font-size: 3rem;
     color: var(--red);
+}
+
+section h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px 0 15px 0;
+    font-size: 2rem;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+iframe {
+    height: 500px;
+    border: 0px;
+    width: 600px;
 }
 
 .red-button {
@@ -43,37 +62,37 @@ h1::first-letter {
     font-size: 0.8rem;
     font-weight: bold;
 }
-
 .red-button:hover {
-    background-color: var(--white);
-    color: var(--red);
+    background-color: var(--lightred);
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px auto;
+}
+
+/* HEADER */
 .topbar {
     background-color: var(--black);
     color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 80px;
+    padding: 15px var(--margin-side);
+    position: fixed;
+    width: 100%;
 }
-
-.topbar h1 {
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-}
-
 .topbar .menu ul {
     list-style-type: none;
 }
-
 .topbar .menu li {
     display: inline-block;
     margin-left: 1.5rem;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 600;
-
 }
 .topbar .menu a {
     display: inline-block;
@@ -85,9 +104,8 @@ h1::first-letter {
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
 }
-
 .topbar .menu a:hover {
-    background-color: var(--red);
+    background-color: var(--lightred);
 }
 
 .banner {
@@ -97,78 +115,117 @@ h1::first-letter {
     background-position: center;
     height: 90vh;
 }
-
 .banner .presentation {
-    padding: 15vh 80px;
-    width: 750px;
+    padding: 15vh var(--margin-side);
+    width: 902px;
 }
-
 .banner .presentation h3 {
     color: var(--white);
-    text-transform: uppercase;
     font-weight: 900;
     font-size: 0.8rem;
 }
-
 .banner .presentation h2 {
+    font-family: 'Raleway', 'Montserrat', sans-serif;
     color: var(--white);
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 5.6rem;
     margin-top: 15px;
-    font-family: 'Raleway', 'Montserrat', sans-serif;
 }
-
 .banner .presentation .price {
+    font-family: 'Maven Pro', sans-serif;
     color: var(--grey);
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 3rem;
     margin-top: 15px;
-    font-family: 'Maven Pro', sans-serif;
-
 }
-
 .banner .presentation .description {
     color: var(--white);
     font-size: 1rem;
     margin: 15px 0 30px 0;
 }
+/* HEADER */
 
-.related-products h2{
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 30px;
-    font-size: 2rem;
-}
-.related-products {
-    margin-bottom: 3rem;
-}
+/* PRODUCTS */
 .products {
-    display: flex;
     text-align: center;
 }
-
-.products .product h3{
-    text-transform: uppercase;
-    margin: 20px 0;
-}
-
 .products .product p{
-    margin: 20px 0;
+    margin: 20px 80px;
     font-family: 'Maven Pro';
 }
-
 .products .product .price {
     color: var(--red);
     font-weight: bolder;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+}
+/* PRODUCTS */
+
+/* CONTACT */
+.contact-us .contact {
+    flex-basis: 50%;
+}
+.form-contact {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 1.2rem;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.form-contact .form-group label {
+    display: block;
+}
+.form-contact .form-group label::after {
+    content: '*'
+}
+.form-contact .form-group:nth-child(1), 
+.form-contact .form-group:nth-child(2) {
+     width: 45%;
+}
+.form-contact .form-group:nth-child(3), 
+.form-contact .form-group:nth-child(4),
+.form-contact .form-group:nth-child(5) {
+    width: 100%;
+}
+.form-contact .form-group .form-control {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid var(--red);
+    margin: 10px 40px 5px 0;
+} 
+.form-contact .form-group input {
+    height: 35px;
+    outline: none;
+    padding: 10px;
+}
+.form-contact textarea {
+    height: 100px;
+    outline: none;
+    padding: 10px;
+}
+.form-contact input[type="submit"] {
+    background-color: var(--red);
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.form-contact input[type="submit"]:hover {
+    background-color: var(--lightred);
 }
 
-.map {
-    background-color: var(--black);
+.contact-us .contact h3{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.5rem;
 }
-
+/* FOOTER */
 .footer {
     background-color: var(--black);
     text-align: center;
@@ -176,11 +233,8 @@ h1::first-letter {
     padding: 50px 0;
     font-family: 'Maven Pro';
 }
-
-.footer h1 {
-    margin-bottom: 1rem;
-}
-
-.footer p {
+.footer p:first-of-type {
+    padding-top: 1rem;
     font-size: small;
 }
+/* footer */

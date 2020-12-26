@@ -11,13 +11,13 @@
         <title>Foodo</title>
     </head>
     <body>
-        <header>
+        <header id="header">
             <div class="topbar">
                 <h1>Foodo</h1>
                 <nav class="menu">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#products">Products</a></li>
                         <li><a href="#about-us">About us</a></li>
                         <li><a href="#contact-us">Contact us</a></li>
                         <li><a href="#get-food" class="red-button">Get Foodo</a></li>
@@ -34,9 +34,9 @@
                 </div>
             </div>
         </header>
-        <section id="related-products" class="related-products">
+        <section id="products" class="related-products">
             <h2>Related Products</h2>
-            <div class="products">
+            <div class="container products">
                 <div class="product">
                     <img src="images/super-supreme.png" alt="Super supreme">
                     <h3>Super supreme</h3>
@@ -60,18 +60,54 @@
                 </div>
             </div>
         </section>
-        <section class="map">
-            <iframe 
-            title="Restaurant Burger Foodo in London"
-            scrolling="no" 
-            marginheight="0" 
-            marginwidth="0" 
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-0.12146919965744019%2C51.502548585880234%2C-0.11857241392135622%2C51.50402450694061&amp;layer=mapnik&amp;marker=51.50328655238573%2C-0.1200208067893982" style="border: 1px solid black"></iframe>
-            <br/>
+        <section id="contact-us" class="contact-us">
+            <h2>Contact us</h2>
+            <div class="container">
+                <div>
+                    <iframe 
+                    title="Restaurant Burger Foodo in London"
+                    scrolling="no" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.12146919965744019%2C51.502548585880234%2C-0.11857241392135622%2C51.50402450694061&amp;layer=mapnik&amp;marker=51.50328655238573%2C-0.1200208067893982">
+                    </iframe>
+                </div>
+    
+                <div class="contact">
+                    <h3>Leave us a message</h3>
+                    <form id="form-contact" class="form-contact" method="POST" action="#">
+                        <div class="form-group" class="required">
+                            <label for="firstname">Firstname</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname"  
+                            pattern="[0-9a-zA-Z -]{2,}" required>
+                        </div>
+                        <div class="form-group" class="required">
+                            <label for="lastname">Lastname</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname" 
+                            pattern="[0-9a-zA-Z -]{2,}" required>
+                        </div>
+                        <div class="form-group" class="required">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" 
+                            pattern="^.{2,}" required>
+                        </div>
+                        <div class="form-group" class="required">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control"
+                            pattern="^.{10,}" required>
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send message">
+                        </div>
+                    </form>
+                </div>
+               
+            </div>           
         </section>
         <footer class="footer">
             <h1>Foodo</h1>
-            <p>© Foodo. 2020 Techmind Consulting.</p>
+            <p>© Foodo. 2020 Foodo.</p>
             <p>All rights reserved.</p>
         </footer>
     </body>

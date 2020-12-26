@@ -418,6 +418,7 @@ p {
         line-height: 3.5rem;
         font-size: 1rem;
         margin-top: 10px;
+        width: 100px;
     }
 
     .topbar .menu a {
@@ -429,7 +430,11 @@ p {
     }
 
     .banner .presentation {
-        padding: 22vh var(--margin-side);
+        padding: 5vh var(--margin-side);
+    }
+
+    .banner .presentation h2 {
+        font-size: 4.6rem;
     }
 
     .banner .presentation .description {

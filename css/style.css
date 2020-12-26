@@ -321,4 +321,8 @@ p {
     .product {
         flex-basis: 49%;
     }
+
+    .about-us .about-us-item img{
+        height: 400px;
+    }
 }

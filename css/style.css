@@ -49,6 +49,10 @@ iframe {
     width: 600px;
 }
 
+p {
+    font-family: 'Maven Pro', 'sans-serif';
+}
+
 .red-button {
     display: inline-block;
     width: 160px;
@@ -66,9 +70,30 @@ iframe {
     background-color: var(--lightred);
 }
 
+.white-button {
+    display: block;
+    margin-top: 2rem;
+    width: 160px;
+    height: 45px;
+    border: 2px solid var(--red);
+    border-radius: 20px;
+    background-color: var(--white);
+    color: var(--red);
+    text-align: center;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.white-button:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
 .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 80%;
     margin: 50px auto;
 }
@@ -116,7 +141,7 @@ iframe {
     height: 90vh;
 }
 .banner .presentation {
-    padding: 15vh var(--margin-side);
+    padding: 17vh var(--margin-side);
     width: 902px;
 }
 .banner .presentation h3 {
@@ -147,18 +172,51 @@ iframe {
 }
 /* HEADER */
 
+/* ABOUT US */
+.about-us {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.about-us .about-us-item {
+    flex-basis: 35%;
+    margin-bottom: 3rem;
+}
+.about-us .about-us-item img{
+    height: 500px;
+}
+.about-us h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.about-us p {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    width: 400px;
+}
+/* ABOUT US */
 /* PRODUCTS */
-.products {
+.related-products {
     text-align: center;
 }
-.products .product p{
-    margin: 20px 80px;
-    font-family: 'Maven Pro';
+.products {
+    text-align: center;
+    flex-wrap: wrap;
 }
+.products .product p {
+    margin: 20px 80px;
+}
+
 .products .product .price {
     color: var(--red);
     font-weight: bolder;
     font-size: 1.8rem;
+}
+
+.product {
+    flex-basis: 33%;
+    margin-bottom: 2rem;
+    border: 1px solid #F1F1F1;
+    padding-bottom: 1rem;
 }
 /* PRODUCTS */
 
@@ -238,3 +296,29 @@ iframe {
     font-size: small;
 }
 /* footer */
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --margin-side: 30px;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    iframe {
+        height: 500px;
+        border: 0px;
+        width: 100%;
+    }
+    .banner {
+        height: 95vh;
+    }
+    .banner .presentation {
+        width: 570px;
+    }
+
+    .product {
+        flex-basis: 49%;
+    }
+}

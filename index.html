@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="zxx">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Fresh Tasty Burger">
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;900&family=Raleway:wght@900&display=swap" rel="stylesheet">
         <title>Foodo</title>
@@ -127,9 +126,6 @@
                 <div class="contact">
                     <iframe 
                     title="Restaurant Burger Foodo in London"
-                    scrolling="no" 
-                    marginheight="0" 
-                    marginwidth="0" 
                     src="https://www.openstreetmap.org/export/embed.html?bbox=-0.12146919965744019%2C51.502548585880234%2C-0.11857241392135622%2C51.50402450694061&amp;layer=mapnik&amp;marker=51.50328655238573%2C-0.1200208067893982">
                     </iframe>
                 </div>
@@ -137,25 +133,24 @@
                 <div class="contact">
                     <h3>Leave us a message</h3>
                     <form id="form-contact" class="form-contact" method="POST" action="#">
-                        <div class="form-group" class="required">
+                        <div class="form-group required">
                             <label for="firstname">Firstname</label>
                             <input type="text" class="form-control" id="firstname" name="firstname"  
                             pattern="[0-9a-zA-Z -]{2,}" required>
                         </div>
-                        <div class="form-group" class="required">
+                        <div class="form-group required">
                             <label for="lastname">Lastname</label>
                             <input type="text" class="form-control" id="lastname" name="lastname" 
                             pattern="[0-9a-zA-Z -]{2,}" required>
                         </div>
-                        <div class="form-group" class="required">
+                        <div class="form-group required">
                             <label for="subject">Subject</label>
                             <input type="text" class="form-control" id="subject" name="subject" 
                             pattern="^.{2,}" required>
                         </div>
-                        <div class="form-group" class="required">
+                        <div class="form-group required">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control"
-                            pattern="^.{10,}" required>
+                            <textarea id="message" name="message" class="form-control" required>
                             </textarea>
                         </div>
                         <div class="form-group">

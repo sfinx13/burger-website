@@ -20,6 +20,7 @@ html {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 h1 {
@@ -66,10 +67,53 @@ p {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: bold;
+
+
 }
 .red-button:hover {
     background-color: var(--lightred);
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--lightred);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 30px 16px;
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    text-align: center;
+}
+:target {
+    display: block;
+}
+
+.uber-eats {
+    background: url('https://api.iconify.design/simple-icons:ubereats.svg?color=white') no-repeat center center / 30%;
+}
+
+.just-eat {
+    background: url('https://api.iconify.design/simple-icons:justeat.svg?color=white') no-repeat center center / 30%;
+}
+
+.deliveroo {
+    background: url('https://api.iconify.design/simple-icons:deliveroo.svg?color=white') no-repeat center center / 30%;
+}
+
+
+
 
 .white-button {
     display: block;

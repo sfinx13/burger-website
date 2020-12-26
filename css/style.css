@@ -206,13 +206,11 @@ p {
 .products .product p {
     margin: 20px 80px;
 }
-
 .products .product .price {
     color: var(--red);
     font-weight: bolder;
     font-size: 1.8rem;
 }
-
 .product {
     flex-basis: 33%;
     margin-bottom: 2rem;
@@ -278,12 +276,12 @@ p {
 .form-contact input[type="submit"]:hover {
     background-color: var(--lightred);
 }
-
 .contact-us .contact h3{
     margin: 20px 0;
     text-align: center;
     font-size: 1.5rem;
 }
+
 /* FOOTER */
 .footer {
     background-color: var(--black);
@@ -336,7 +334,7 @@ p {
     }
 
     .topbar .menu a {
-        width: 120px;
+        width: 100px;
     }
 
     .topbar h1 span{
@@ -383,6 +381,7 @@ p {
 
     html {
         font-size: 12px;
+        width: fit-content;
     }
     
     .topbar {

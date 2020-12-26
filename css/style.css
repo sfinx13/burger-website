@@ -298,11 +298,25 @@ p {
 }
 /* footer */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     :root {
         --margin-side: 30px;
     }
 
+    html {
+        font-size: 15px;
+    }
+
+    .banner .presentation {
+        width: 620px;
+    }
+
+    .product {
+        flex-basis: 49%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
     html {
         font-size: 14px;
     }
@@ -312,18 +326,79 @@ p {
         border: 0px;
         width: 100%;
     }
-    .banner {
-        height: 95vh;
-    }
-    .banner .presentation {
-        width: 570px;
+
+    .container {
+        width: 90%;
     }
 
-    .product {
-        flex-basis: 49%;
+    .topbar h1{
+        display: none;
+    }
+
+    .banner {
+        height: 95vh;
+        
+    }
+    .about-us .about-us-item img{
+        height: 405px;
+    }
+}
+
+@media screen and (max-width: 825px) {
+    .topbar {
+        display: none;
+    }
+
+    .contact-us .container {
+        flex-direction: column;
+    }
+
+    .banner {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    :root {
+        --margin-side: 20px;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    .topbar {
+        display: none;
+    }
+
+    .banner .presentation {
+        padding: 8vh var(--margin-side);
+    }
+
+    .banner .presentation .description {
+        width: 300px;
+    }
+
+    .about-us .about-us-item {
+        flex: 1 0 100%;
+        margin-bottom: 1rem;
+    }
+
+    .about-us p {
+        margin: 0.5rem 0;
+        width: 100%;
     }
 
     .about-us .about-us-item img{
-        height: 405px;
+        display: none;
+    }
+
+    .product {
+        flex-basis: 100%;
+    }
+    
+    .red-button, .white-button {
+        line-height: 3.5rem;
+        font-size: 1rem;
     }
 }

@@ -18,11 +18,6 @@ html {
     scroll-behavior: smooth;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 h1 {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
@@ -55,6 +50,11 @@ p {
     font-family: 'Maven Pro', 'sans-serif';
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .red-button {
     display: inline-block;
     width: 160px;
@@ -67,17 +67,38 @@ p {
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: bold;
-
-
 }
+
 .red-button:hover {
     background-color: var(--lightred);
+}
+
+.white-button {
+    display: block;
+    margin-top: 2rem;
+    width: 160px;
+    height: 45px;
+    border: 2px solid var(--red);
+    border-radius: 20px;
+    background-color: var(--white);
+    color: var(--red);
+    text-align: center;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.white-button:hover {
+    background-color: var(--red);
+    color: var(--white);
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -96,43 +117,17 @@ p {
     height: 40px;
     text-align: center;
 }
-:target {
-    display: block;
-}
 
-.uber-eats {
+.icon-uber-eats {
     background: url('https://api.iconify.design/simple-icons:ubereats.svg?color=white') no-repeat center center / 30%;
 }
 
-.just-eat {
+.icon-just-eat {
     background: url('https://api.iconify.design/simple-icons:justeat.svg?color=white') no-repeat center center / 30%;
 }
 
-.deliveroo {
+.icon-deliveroo {
     background: url('https://api.iconify.design/simple-icons:deliveroo.svg?color=white') no-repeat center center / 30%;
-}
-
-
-
-
-.white-button {
-    display: block;
-    margin-top: 2rem;
-    width: 160px;
-    height: 45px;
-    border: 2px solid var(--red);
-    border-radius: 20px;
-    background-color: var(--white);
-    color: var(--red);
-    text-align: center;
-    line-height: 2.8rem;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-.white-button:hover {
-    background-color: var(--red);
-    color: var(--white);
 }
 
 .container {
@@ -143,8 +138,8 @@ p {
     margin: 50px auto;
 }
 
-/* HEADER */
-.topbar {
+/* header */
+.header-topbar {
     background-color: var(--black);
     color: var(--white);
     display: flex;
@@ -154,17 +149,17 @@ p {
     position: fixed;
     width: 100%;
 }
-.topbar .menu ul {
+.header-topbar .topbar-menu ul {
     list-style-type: none;
 }
-.topbar .menu li {
+.header-topbar .topbar-menu li {
     display: inline-block;
     margin-left: 1.5rem;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 600;
 }
-.topbar .menu a {
+.header-topbar .topbar-menu .menu a {
     display: inline-block;
     color: var(--white);
     text-align: center;
@@ -174,27 +169,26 @@ p {
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
 }
-.topbar .menu a:hover {
+.header-topbar .topbar-menu .menu a:hover {
     background-color: var(--lightred);
 }
-
-.banner {
+.header-banner {
     background: url('../images/burger-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 90vh;
 }
-.banner .presentation {
+.header-banner .presentation {
     padding: 17vh var(--margin-side);
     width: 902px;
 }
-.banner .presentation h3 {
+.header-banner .presentation h3 {
     color: var(--white);
     font-weight: 900;
     font-size: 0.8rem;
 }
-.banner .presentation h2 {
+.header-banner .presentation h2 {
     font-family: 'Raleway', 'Montserrat', sans-serif;
     color: var(--white);
     text-transform: uppercase;
@@ -202,7 +196,7 @@ p {
     font-size: 5.6rem;
     margin-top: 15px;
 }
-.banner .presentation .price {
+.header-banner .presentation .price {
     font-family: 'Maven Pro', sans-serif;
     color: var(--grey);
     text-transform: uppercase;
@@ -210,14 +204,14 @@ p {
     font-size: 3rem;
     margin-top: 15px;
 }
-.banner .presentation .description {
+.header-banner .presentation .description {
     color: var(--white);
     font-size: 1rem;
     margin: 15px 0 30px 0;
 }
-/* HEADER */
+/* header */
 
-/* ABOUT US */
+/* about us */
 .about-us {
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -238,36 +232,37 @@ p {
     margin: 1rem 0;
     width: 400px;
 }
-/* ABOUT US */
-/* PRODUCTS */
-.related-products {
+/* about us */
+
+/* products */
+.recommanded {
     text-align: center;
 }
-.products {
+.recommanded-products {
     text-align: center;
     flex-wrap: wrap;
 }
-.products .product p {
-    margin: 20px 80px;
-}
-.products .product .price {
-    color: var(--red);
-    font-weight: bolder;
-    font-size: 1.8rem;
-}
-.product {
+.recommanded-products .product {
     flex-basis: 33%;
     margin-bottom: 2rem;
     border: 1px solid #F1F1F1;
     padding-bottom: 1rem;
 }
-/* PRODUCTS */
+.recommanded-products .product p {
+    margin: 20px 80px;
+}
+.recommanded-products .product .price {
+    color: var(--red);
+    font-weight: bolder;
+    font-size: 1.8rem;
+}
+/* products */
 
-/* CONTACT */
+/* contact */
 .contact-us .contact {
     flex-basis: 50%;
 }
-.form-contact {
+.contact .form-contact {
     font-family: 'Maven Pro', sans-serif;
     font-size: 1.2rem;
     padding: 25px 50px;
@@ -325,8 +320,9 @@ p {
     text-align: center;
     font-size: 1.5rem;
 }
+/* contact */
 
-/* FOOTER */
+/* footer */
 .footer {
     background-color: var(--black);
     text-align: center;

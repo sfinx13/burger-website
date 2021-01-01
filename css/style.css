@@ -159,7 +159,7 @@ a {
     font-size: 0.8rem;
     font-weight: 600;
 }
-.header-topbar .topbar-menu .menu a {
+.header-topbar .topbar-menu a {
     display: inline-block;
     color: var(--white);
     text-align: center;
@@ -169,26 +169,23 @@ a {
     line-height: 2.8rem;
     letter-spacing: 0.1rem;
 }
-.header-topbar .topbar-menu .menu a:hover {
+.header-topbar .topbar-menu a:hover {
     background-color: var(--lightred);
 }
 .header-banner {
     background: url('../images/burger-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     height: 90vh;
-}
-.header-banner .presentation {
     padding: 17vh var(--margin-side);
-    width: 902px;
 }
-.header-banner .presentation h3 {
+.header-banner h3 {
     color: var(--white);
     font-weight: 900;
     font-size: 0.8rem;
 }
-.header-banner .presentation h2 {
+.header-banner h2 {
     font-family: 'Raleway', 'Montserrat', sans-serif;
     color: var(--white);
     text-transform: uppercase;
@@ -196,7 +193,7 @@ a {
     font-size: 5.6rem;
     margin-top: 15px;
 }
-.header-banner .presentation .price {
+.header-banner .price {
     font-family: 'Maven Pro', sans-serif;
     color: var(--grey);
     text-transform: uppercase;
@@ -204,10 +201,12 @@ a {
     font-size: 3rem;
     margin-top: 15px;
 }
-.header-banner .presentation .description {
+.header-banner .description {
     color: var(--white);
     font-size: 1rem;
     margin: 15px 0 30px 0;
+    width: 50%;
+    min-width: 320px;
 }
 /* header */
 
@@ -336,17 +335,13 @@ a {
 }
 /* footer */
 
-@media screen and (max-width: 1200px) {
+ @media screen and (max-width: 1200px) {
     :root {
         --margin-side: 30px;
     }
 
     html {
         font-size: 15px;
-    }
-
-    .banner .presentation {
-        width: 620px;
     }
 
     .product {
@@ -369,22 +364,22 @@ a {
         width: 90%;
     }
 
-    .topbar .menu li {
-        margin-left: 0.1rem;
+    .header-banner {
+        height: 95vh;
     }
 
-    .topbar .menu a {
-        width: 100px;
-    }
-
-    .topbar h1 span{
+    .header-topbar h1 span{
         display: none;
     }
 
-    .banner {
-        height: 95vh;
-        
+    .header-topbar .topbar-menu li {
+        margin-left: 0.1rem;
     }
+
+    .header-topbar .topbar-menu a {
+        width: 100px;
+    }
+
     .about-us .about-us-item img{
         height: 405px;
     }
@@ -393,10 +388,6 @@ a {
 @media screen and (max-width: 825px) {
     .contact-us .container {
         flex-direction: column;
-    }
-
-    .banner {
-        height: 70vh;
     }
 
     .about-us .about-us-item {
@@ -421,18 +412,18 @@ a {
 
     html {
         font-size: 12px;
-        width: fit-content;
     }
     
-    .topbar {
+    .header-topbar {
         display: none;
     }
 
-    .banner .presentation {
+    .header-banner  {
         padding: 8vh var(--margin-side);
+        height: 70vh;
     }
 
-    .banner .presentation .description {
+    .header-banner .description {
         width: 300px;
     }
 
@@ -443,41 +434,5 @@ a {
     .red-button, .white-button {
         line-height: 3.5rem;
         font-size: 1rem;
-    }
-}
-
-@media only screen and
-  (max-width: 740px)
-  and (orientation: landscape) {
-    
-    html {
-        font-size: 12px;
-    }
-
-    .red-button,.white-button {
-        line-height: 3.5rem;
-        font-size: 1rem;
-        margin-top: 10px;
-        width: 100px;
-    }
-
-    .topbar .menu a {
-        line-height: 3.5rem;
-    }
-
-    .banner {
-        height: 100vh;
-    }
-
-    .banner .presentation {
-        padding: 5vh var(--margin-side);
-    }
-
-    .banner .presentation h2 {
-        font-size: 4.6rem;
-    }
-
-    .banner .presentation .description {
-        display: none;
     }
 }

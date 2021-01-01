@@ -178,9 +178,11 @@ a {
     background-repeat: no-repeat;
     background-position: center center;
     height: 90vh;
-    padding: 17vh var(--margin-side);
+    padding: 5vh var(--margin-side);
 }
-.header-banner h3 {
+.header-banner h2::before {
+    content: 'The one and only\A';
+    white-space: pre;
     color: var(--white);
     font-weight: 900;
     font-size: 0.8rem;
@@ -419,8 +421,7 @@ a {
     }
 
     .header-banner  {
-        padding: 8vh var(--margin-side);
-        height: 70vh;
+        padding: 0vh var(--margin-side);
     }
 
     .header-banner .description {
@@ -434,5 +435,11 @@ a {
     .red-button, .white-button {
         line-height: 3.5rem;
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .header-banner h2 {
+        font-size: 4.6rem;
     }
 }

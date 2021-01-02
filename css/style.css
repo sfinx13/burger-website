@@ -244,8 +244,8 @@ a {
     flex-wrap: wrap;
 }
 .recommanded-products .product {
-    flex-basis: 33%;
-    margin-bottom: 2rem;
+    flex: 1 0 300px;
+    margin: 1rem 5px;
     border: 1px solid #F1F1F1;
     padding-bottom: 1rem;
 }
@@ -421,7 +421,7 @@ a {
     }
 
     .header-banner  {
-        padding: 0vh var(--margin-side);
+        padding: 1vh var(--margin-side);
     }
 
     .header-banner .description {

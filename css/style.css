@@ -94,30 +94,6 @@ a {
     color: var(--white);
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--lightred);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 20px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 30px 16px;
-    text-decoration: none;
-    display: block;
-    height: 40px;
-    text-align: center;
-}
-
 .icon-uber-eats {
     background: url('https://api.iconify.design/simple-icons:ubereats.svg?color=white') no-repeat center center / 30%;
 }
@@ -136,6 +112,23 @@ a {
     flex-wrap: wrap;
     width: 80%;
     margin: 50px auto;
+}
+
+.check-button {
+    background-color: rgba(18,18,18,0.4);
+    width: 50px;
+    text-align: center;
+    font-size: 45px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+
+#check {
+    display: none;
 }
 
 /* header */
@@ -413,11 +406,63 @@ a {
     }
 
     html {
-        font-size: 12px;
+        font-size: 13px;
     }
     
     .header-topbar {
+        background-color: transparent;
+    }
+
+    .check-button {
+        display: block;
+    }
+
+    .header-topbar .topbar-menu {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        padding: 0;
+        margin: 1rem 0;
+        display: block;
+        background-color: rgba(18,18,18,0.9);
+        position: fixed;
+        top: -12px;
+        left: -100%;
+        transition-duration: 0.5s;
+    }
+
+    :checked ~ .topbar-menu {
+        position: fixed;
+        top: -12px;
+        left: 0;
+    }
+
+    .header-topbar h1 {
         display: none;
+    }
+
+    .header-topbar li {
+        display: block;
+        width: 100%;
+        margin: 1.5rem 0;
+        background-color: transparent;
+    }
+
+    .header-topbar .topbar-menu a {
+        display: block;
+        font-size: 1.3rem;
+        width: 100%;
+        border-radius: 0px;
+        margin: 0;
+    }
+
+    .header-topbar .topbar-menu {
+        left: -100%;
+    }
+
+    .header-topbar .topbar-menu a:hover {
+        background-color: transparent;
+        color: var(--red);
     }
 
     .header-banner  {
@@ -436,9 +481,14 @@ a {
         font-size: 1rem;
     }
 
+    .red-button:first-child {
+        background-color: transparent;
+    }
+
     .contact .form-contact {
         padding: 0;
     }
+
 }
 
 @media screen and (max-width: 420px) {

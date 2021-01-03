@@ -432,8 +432,6 @@ a {
     }
 
     :checked ~ .topbar-menu {
-        position: fixed;
-        top: -12px;
         left: 0;
     }
 
@@ -454,10 +452,6 @@ a {
         width: 100%;
         border-radius: 0px;
         margin: 0;
-    }
-
-    .header-topbar .topbar-menu {
-        left: -100%;
     }
 
     .header-topbar .topbar-menu a:hover {

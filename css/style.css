@@ -174,8 +174,7 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 90vh;
-    padding: 5vh var(--margin-side);
+    padding: 10vh var(--margin-side);
 }
 .header-banner h2::before {
     content: 'The one and only\A';
@@ -361,10 +360,6 @@ a {
 
     .container {
         width: 90%;
-    }
-
-    .header-banner {
-        height: 95vh;
     }
 
     .header-topbar h1 span{

@@ -131,6 +131,10 @@ a {
     display: none;
 }
 
+#menu-burger:target {
+    left: -100%;
+}
+
 /* header */
 .header-topbar {
     background-color: var(--black);
@@ -418,21 +422,22 @@ a {
     }
 
     .header-topbar .topbar-menu {
-        width: 100%;
+        width: 50%;
         height: 100vh;
         text-align: center;
-        padding: 0;
+        padding-top: 3rem;
         margin: 1rem 0;
         display: block;
         background-color: rgba(18,18,18,0.9);
         position: fixed;
         top: -12px;
-        left: -100%;
+        right: -100%;
         transition-duration: 0.5s;
+        z-index:1;
     }
 
     :checked ~ .topbar-menu {
-        left: 0;
+        right: 0;
     }
 
     .header-topbar h1 {

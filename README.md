@@ -10,7 +10,7 @@
 
 A delicious HTML CSS website of Pizza Burger Restaurant and much much more
 
-<img src="images/screenshot.png" alt="Screenshot portfolio website" width="500">
+<img src="assets/images/screenshot.png" alt="Screenshot portfolio website" width="500">
 
 ### Demo
 

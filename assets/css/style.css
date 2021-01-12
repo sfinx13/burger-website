@@ -1,26 +1,22 @@
 /* -----------------------------------------------
-				CSS Styles 
+    CSS Styles 
 --------------------------------------------------
-
     Project Name: Burger Restaurant
-    
 --------------------------------------------------
 
 Table of Content
-
-	- Global
+    - Global
     - Header Top
     - Header Banner
-	- About us 
-	- Recommanded Today 
-	- Contact Us 
-	- Footer
-	- Responsive
+    - About us 
+    - Recommanded Today 
+    - Contact Us 
+    - Footer
+    - Responsive
 -------------------------------------------------- */
 
-
 /*--------------------------------------------------
-		 Global
+		Global
 --------------------------------------------------- */
 *, ::before, ::after {
     margin: 0;
@@ -171,7 +167,7 @@ a {
 }
 
 /*--------------------------------------------------
-		 Header Topbar
+		Header Topbar
 --------------------------------------------------- */
 
 .header-topbar {
@@ -209,7 +205,7 @@ a {
 }
 
 /*--------------------------------------------------
-		 Header Banner
+		Header Banner
 --------------------------------------------------- */
 .header-banner {
     background: url('../images/burger-background.jpg');
@@ -250,7 +246,7 @@ a {
 }
 
 /*--------------------------------------------------
-		 About us
+		About us
 --------------------------------------------------- */
 .about-us {
     flex-wrap: wrap;
@@ -274,7 +270,7 @@ a {
 }
 
 /*--------------------------------------------------
-		 Recommanded Today
+		Recommanded Today
 --------------------------------------------------- */
 .recommanded {
     text-align: center;
@@ -299,7 +295,7 @@ a {
 }
 
 /*--------------------------------------------------
-		 Contact us
+		Contact us
 --------------------------------------------------- */
 .contact-us .contact {
     flex-basis: 50%;
@@ -364,7 +360,7 @@ a {
 }
 
 /*--------------------------------------------------
-		 Footer
+		Footer
 --------------------------------------------------- */
 .footer {
     background-color: var(--black);
@@ -379,7 +375,7 @@ a {
 }
 
 /*--------------------------------------------------
-		 Responsive Design
+		Responsive Design
 --------------------------------------------------- */
  @media screen and (max-width: 1200px) {
     :root {

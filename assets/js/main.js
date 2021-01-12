@@ -28,12 +28,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function success() {
         form.reset();
-        status.innerHTML = "Votre message a bien été envoyé!";
+        status.innerHTML = "Your message has been sent!";
         status.classList.add("success");
     }
   
     function error() {
-        status.innerHTML = "Oops! Une erreur est survenue, merci de réessayer";
+        status.innerHTML = "Oops! An error has occured, please try again";
         status.classList.add("error");
     }
 

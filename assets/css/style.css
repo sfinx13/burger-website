@@ -1,3 +1,27 @@
+/* -----------------------------------------------
+				CSS Styles 
+--------------------------------------------------
+
+    Project Name: Burger Restaurant
+    
+--------------------------------------------------
+
+Table of Content
+
+	- Global
+    - Header Top
+    - Header Banner
+	- About us 
+	- Recommanded Today 
+	- Contact Us 
+	- Footer
+	- Responsive
+-------------------------------------------------- */
+
+
+/*--------------------------------------------------
+		 Global
+--------------------------------------------------- */
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -55,6 +79,58 @@ a {
     color: white;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 50px auto;
+}
+
+#check {
+    display: none;
+}
+
+#menu-burger:target {
+    left: -100%;
+}
+
+#form-contact-status {
+    width: fit-content;
+    padding: 25px 50px;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: 1px solid #c3e6cb;
+    transition: 0.5s ease;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: 1px solid #f5c6cb;
+    transition: 0.5s ease;
+}
+
+
+/* ---------- Buttons ---------  */
+.check-button {
+    background-color: rgba(18,18,18,0.4);
+    width: 50px;
+    text-align: center;
+    font-size: 45px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+
 .red-button {
     display: inline-block;
     width: 10rem;
@@ -94,48 +170,10 @@ a {
     color: var(--white);
 }
 
-.icon-uber-eats {
-    background: url('https://api.iconify.design/simple-icons:ubereats.svg?color=white') no-repeat center center / 30%;
-}
+/*--------------------------------------------------
+		 Header Topbar
+--------------------------------------------------- */
 
-.icon-just-eat {
-    background: url('https://api.iconify.design/simple-icons:justeat.svg?color=white') no-repeat center center / 30%;
-}
-
-.icon-deliveroo {
-    background: url('https://api.iconify.design/simple-icons:deliveroo.svg?color=white') no-repeat center center / 30%;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 50px auto;
-}
-
-.check-button {
-    background-color: rgba(18,18,18,0.4);
-    width: 50px;
-    text-align: center;
-    font-size: 45px;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    display: none;
-    z-index: 1;
-}
-
-#check {
-    display: none;
-}
-
-#menu-burger:target {
-    left: -100%;
-}
-
-/* header */
 .header-topbar {
     background-color: var(--black);
     color: var(--white);
@@ -169,6 +207,10 @@ a {
 .header-topbar .topbar-menu a:hover {
     background-color: var(--lightred);
 }
+
+/*--------------------------------------------------
+		 Header Banner
+--------------------------------------------------- */
 .header-banner {
     background: url('../images/burger-background.jpg');
     background-size: cover;
@@ -206,9 +248,10 @@ a {
     width: 50%;
     min-width: 320px;
 }
-/* header */
 
-/* about us */
+/*--------------------------------------------------
+		 About us
+--------------------------------------------------- */
 .about-us {
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -229,9 +272,10 @@ a {
     margin: 1rem 0;
     width: 400px;
 }
-/* about us */
 
-/* products */
+/*--------------------------------------------------
+		 Recommanded Today
+--------------------------------------------------- */
 .recommanded {
     text-align: center;
 }
@@ -253,9 +297,10 @@ a {
     font-weight: bolder;
     font-size: 1.8rem;
 }
-/* products */
 
-/* contact */
+/*--------------------------------------------------
+		 Contact us
+--------------------------------------------------- */
 .contact-us .contact {
     flex-basis: 50%;
 }
@@ -317,9 +362,10 @@ a {
     text-align: center;
     font-size: 1.5rem;
 }
-/* contact */
 
-/* footer */
+/*--------------------------------------------------
+		 Footer
+--------------------------------------------------- */
 .footer {
     background-color: var(--black);
     text-align: center;
@@ -331,8 +377,10 @@ a {
     padding-top: 1rem;
     font-size: small;
 }
-/* footer */
 
+/*--------------------------------------------------
+		 Responsive Design
+--------------------------------------------------- */
  @media screen and (max-width: 1200px) {
     :root {
         --margin-side: 30px;
@@ -495,7 +543,6 @@ a {
     }
 }
 
-/* Landscape */
 @media only screen 
   and (min-width: 375px) 
   and (max-width: 667px) 
@@ -509,4 +556,3 @@ a {
         font-size: 2.5rem;
     }
 }
-

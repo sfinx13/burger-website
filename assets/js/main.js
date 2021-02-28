@@ -1,5 +1,3 @@
-
-
 function writeCurrentYear() {
     document.querySelector('.footer p span').innerHTML = '2020 - ' + new Date().getFullYear();
 }
@@ -28,8 +26,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function success() {
         form.reset();
+        status.style.display = "block";
         status.innerHTML = "Your message has been sent!";
         status.classList.add("success");
+        
+        setTimeout(() => {
+          status.style.opacity = 0;
+          status.style.display = "none";
+        }, 5000);
     }
   
     function error() {

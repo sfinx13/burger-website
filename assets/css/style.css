@@ -31,6 +31,7 @@ Table of Content
     --white: #ffffff;
     --grey: #727273;
     --margin-side: 160px;
+    --transition-duration: 0.5s;
 }
 
 html {
@@ -92,10 +93,12 @@ a {
 }
 
 #form-contact-status {
+    display: none;
     width: fit-content;
     padding: 25px 50px;
     margin: 1rem auto;
     border-radius: 10px;
+    transition: all 0.5s ease-out;
 }
 
 .success {
@@ -372,6 +375,20 @@ a {
 .footer p:first-of-type {
     padding-top: 1rem;
     font-size: small;
+}
+
+/*--------------------------------------------------
+		What's app
+--------------------------------------------------- */
+.whatsapp-button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+}
+.whatsapp-button:hover {
+    transform: rotate(360deg);
 }
 
 /*--------------------------------------------------

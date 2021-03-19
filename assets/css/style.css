@@ -18,16 +18,18 @@ Table of Content
 /*--------------------------------------------------
 		Global
 --------------------------------------------------- */
-*, ::before, ::after {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root {
-    --black: rgba(18,18,18,0.9);
-    --red: #EE022B;
-    --lightred: rgba(255,0,0,0.7);
+    --black: rgba(18, 18, 18, 0.9);
+    --red: #ee022b;
+    --lightred: rgba(255, 0, 0, 0.7);
     --white: #ffffff;
     --grey: #727273;
     --margin-side: 160px;
@@ -35,7 +37,7 @@ Table of Content
 }
 
 html {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -68,7 +70,7 @@ iframe {
 }
 
 p {
-    font-family: 'Maven Pro', 'sans-serif';
+    font-family: "Maven Pro", "sans-serif";
 }
 
 a {
@@ -115,10 +117,9 @@ a {
     transition: 0.5s ease;
 }
 
-
 /* ---------- Buttons ---------  */
 .check-button {
-    background-color: rgba(18,18,18,0.4);
+    background-color: rgba(18, 18, 18, 0.4);
     width: 50px;
     text-align: center;
     font-size: 45px;
@@ -132,6 +133,8 @@ a {
 
 .red-button {
     display: inline-block;
+    position: relative ;
+    z-index: 1;
     width: 10rem;
     height: 2.8rem;
     border-radius: 20px;
@@ -144,12 +147,34 @@ a {
     font-weight: bold;
 }
 
-.red-button:hover {
+.red-button::after, .white-button::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
     background-color: var(--lightred);
+}
+
+.red-button:hover {
+    color: var(--red) !important;
+    z-index: 2;
+}
+
+.red-button:hover::after {
+    background-color: var(--white);
+    color: var(--red);
+    transform: scale(1);
 }
 
 .white-button {
     display: block;
+    position: relative;
     margin-top: 2rem;
     width: 10rem;
     height: 2.8rem;
@@ -169,6 +194,12 @@ a {
     color: var(--white);
 }
 
+.white-button:hover::after {
+    background-color: var(--red);
+    color: var(--white);
+    transform: scale(1);
+}
+
 /*--------------------------------------------------
 		Header Topbar
 --------------------------------------------------- */
@@ -181,6 +212,7 @@ a {
     align-items: center;
     padding: 15px var(--margin-side);
     position: fixed;
+    z-index: 2;
     width: 100%;
 }
 .header-topbar .topbar-menu ul {
@@ -211,34 +243,36 @@ a {
 		Header Banner
 --------------------------------------------------- */
 .header-banner {
-    background: url('../images/burger-background.jpg');
+    background: url("../images/burger-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     padding: 10vh var(--margin-side);
 }
 .header-banner h2::before {
-    content: 'The one and only\A';
+    content: "The one and only\A";
     white-space: pre;
     color: var(--white);
     font-weight: 900;
     font-size: 0.8rem;
 }
 .header-banner h2 {
-    font-family: 'Raleway', 'Montserrat', sans-serif;
+    font-family: "Raleway", "Montserrat", sans-serif;
     color: var(--white);
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 5.6rem;
     margin-top: 15px;
+    transform: translateX(-100%);
 }
 .header-banner .price {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: "Maven Pro", sans-serif;
     color: var(--grey);
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 3rem;
     margin-top: 15px;
+    transform: translateX(-100%);
 }
 .header-banner .description {
     color: var(--white);
@@ -246,6 +280,7 @@ a {
     margin: 15px 0 30px 0;
     width: 50%;
     min-width: 320px;
+    transform: translateX(300%);
 }
 
 /*--------------------------------------------------
@@ -259,7 +294,7 @@ a {
     flex-basis: 35%;
     margin-bottom: 3rem;
 }
-.about-us .about-us-item img{
+.about-us .about-us-item img {
     height: 500px;
 }
 .about-us h3 {
@@ -285,9 +320,16 @@ a {
 .recommanded-products .product {
     flex: 1 0 300px;
     margin: 1rem 5px;
-    border: 1px solid #F1F1F1;
+    border: 1px solid #f1f1f1;
     padding-bottom: 1rem;
+    transition: transform ease-in-out 0.3s;
+    cursor: pointer;
 }
+
+.recommanded-products .product:hover {
+    transform: scale(1.1);
+}
+
 .recommanded-products .product p {
     margin: 20px 80px;
 }
@@ -304,7 +346,7 @@ a {
     flex-basis: 50%;
 }
 .contact .form-contact {
-    font-family: 'Maven Pro', sans-serif;
+    font-family: "Maven Pro", sans-serif;
     font-size: 1.2rem;
     padding: 25px 50px;
     display: flex;
@@ -315,13 +357,13 @@ a {
     display: block;
 }
 .form-contact .form-group label::after {
-    content: '*'
+    content: "*";
 }
-.form-contact .form-group:nth-child(1), 
+.form-contact .form-group:nth-child(1),
 .form-contact .form-group:nth-child(2) {
-     width: 45%;
+    width: 45%;
 }
-.form-contact .form-group:nth-child(3), 
+.form-contact .form-group:nth-child(3),
 .form-contact .form-group:nth-child(4),
 .form-contact .form-group:nth-child(5) {
     width: 100%;
@@ -331,7 +373,7 @@ a {
     border-radius: 20px;
     border: 2px solid var(--red);
     margin: 10px 40px 5px 0;
-} 
+}
 .form-contact .form-group input {
     height: 35px;
     outline: none;
@@ -356,7 +398,7 @@ a {
 .form-contact input[type="submit"]:hover {
     background-color: var(--lightred);
 }
-.contact-us .contact h3{
+.contact-us .contact h3 {
     margin: 20px 0;
     text-align: center;
     font-size: 1.5rem;
@@ -370,7 +412,7 @@ a {
     text-align: center;
     color: var(--white);
     padding: 50px 0;
-    font-family: 'Maven Pro';
+    font-family: "Maven Pro";
 }
 .footer p:first-of-type {
     padding-top: 1rem;
@@ -394,7 +436,7 @@ a {
 /*--------------------------------------------------
 		Responsive Design
 --------------------------------------------------- */
- @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     :root {
         --margin-side: 30px;
     }
@@ -423,7 +465,7 @@ a {
         width: 90%;
     }
 
-    .header-topbar h1 span{
+    .header-topbar h1 span {
         display: none;
     }
 
@@ -435,7 +477,7 @@ a {
         width: 100px;
     }
 
-    .about-us .about-us-item img{
+    .about-us .about-us-item img {
         height: 405px;
     }
 }
@@ -455,7 +497,7 @@ a {
         width: 100%;
     }
 
-    .about-us .about-us-item img{
+    .about-us .about-us-item img {
         display: none;
     }
 }
@@ -468,7 +510,7 @@ a {
     html {
         font-size: 13px;
     }
-    
+
     .header-topbar {
         background-color: transparent;
     }
@@ -484,12 +526,12 @@ a {
         padding-top: 3rem;
         margin: 1rem 0;
         display: block;
-        background-color: rgba(18,18,18,0.9);
+        background-color: rgba(18, 18, 18, 0.9);
         position: fixed;
         top: -12px;
         right: -100%;
         transition-duration: 0.5s;
-        z-index:1;
+        z-index: 1;
     }
 
     :checked ~ .topbar-menu {
@@ -520,7 +562,7 @@ a {
         color: var(--red);
     }
 
-    .header-banner  {
+    .header-banner {
         padding: 1vh var(--margin-side);
     }
 
@@ -531,8 +573,9 @@ a {
     .product {
         flex-basis: 100%;
     }
-    
-    .red-button, .white-button {
+
+    .red-button,
+    .white-button {
         font-size: 1rem;
     }
 
@@ -543,7 +586,6 @@ a {
     .contact .form-contact {
         padding: 0;
     }
-
 }
 
 @media screen and (max-width: 420px) {
@@ -556,12 +598,7 @@ a {
     }
 }
 
-@media only screen 
-  and (min-width: 375px) 
-  and (max-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
-
+@media only screen and (min-width: 375px) and (max-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
     .header-banner {
         height: 100vh;
     }

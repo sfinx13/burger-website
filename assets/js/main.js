@@ -48,3 +48,10 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+setTimeout(
+  () => {
+    document.querySelector('.loading').classList.add('loaded');
+    window.scrollTo(0, 0);
+  }, 1000
+)

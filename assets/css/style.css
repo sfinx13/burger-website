@@ -45,6 +45,7 @@ a {
     --lightred: rgba(255, 0, 0, 0.7);
     --white: #ffffff;
     --grey: #727273;
+    --lightgrey: #f1f1f1;
     --margin-side: 160px;
     --transition-duration: 0.5s;
 }
@@ -67,9 +68,9 @@ h3 {
 
 iframe {
     height: 500px;
-    border: 0px;
+    border: 0;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 18px;
 }
 
 p {
@@ -139,7 +140,7 @@ a {
     z-index: 1;
     width: 10rem;
     height: 2.8rem;
-    border-radius: 20px;
+    border-radius: 18px;
     background-color: var(--red);
     color: var(--white);
     text-align: center;
@@ -158,7 +159,7 @@ a {
     z-index: -1;
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 18px;
     transform: scale(0);
     transition: transform 0.3s ease-out;
     background-color: var(--lightred);
@@ -182,7 +183,7 @@ a {
     width: 10rem;
     height: 2.8rem;
     border: 2px solid var(--red);
-    border-radius: 20px;
+    border-radius: 18px;
     background-color: var(--white);
     color: var(--red);
     text-align: center;
@@ -251,7 +252,7 @@ a {
     display: inline-block;
     color: var(--white);
     text-align: center;
-    border-radius: 20px;
+    border-radius: 18px;
     width: 125px;
     height: 40px;
     line-height: 2.8rem;
@@ -335,27 +336,28 @@ a {
 .recommanded {
     text-align: center;
 }
-.recommanded-products {
+.products {
     text-align: center;
     flex-wrap: wrap;
 }
-.recommanded-products .product {
-    flex: 1 0 300px;
+.product {
+    flex: 1 0 30%;
     margin: 1rem 5px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid var(--lightgrey);
     padding-bottom: 1rem;
     transition: transform ease-in-out 0.3s;
     cursor: pointer;
 }
 
-.recommanded-products .product:hover {
+.product:hover {
     transform: scale(1.1);
 }
 
-.recommanded-products .product p {
+.product p {
     margin: 20px 80px;
 }
-.recommanded-products .product .header-banner-price {
+
+.product .price {
     color: var(--red);
     font-weight: bolder;
     font-size: 1.8rem;
@@ -392,7 +394,7 @@ a {
 }
 .form-contact .form-group .form-control {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 18px;
     border: 2px solid var(--red);
     margin: 10px 40px 5px 0;
 }
@@ -413,7 +415,7 @@ a {
     text-transform: uppercase;
     font-weight: bold;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 18px;
     border: none;
     cursor: pointer;
 }
@@ -479,7 +481,7 @@ a {
 
     iframe {
         height: 500px;
-        border: 0px;
+        border: 0;
         width: 100%;
     }
 

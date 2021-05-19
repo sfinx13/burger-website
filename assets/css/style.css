@@ -166,8 +166,7 @@ a {
 }
 
 .red-button:hover {
-    color: var(--red) !important;
-    z-index: 2;
+    color: var(--red);
 }
 
 .red-button:hover::after {
@@ -369,7 +368,8 @@ a {
 .contact-us .contact {
     flex-basis: 50%;
 }
-.contact .form-contact {
+
+.form-contact {
     font-family: "Maven Pro", sans-serif;
     font-size: 1.2rem;
     padding: 25px 50px;
@@ -377,38 +377,46 @@ a {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.form-contact .form-group label {
+
+.form-group label {
     display: block;
 }
-.form-contact .form-group label::after {
+
+.form-group label::after {
     content: "*";
 }
-.form-contact .form-group:nth-child(1),
-.form-contact .form-group:nth-child(2) {
+
+.form-group:nth-child(1),
+.form-group:nth-child(2) {
     width: 45%;
 }
-.form-contact .form-group:nth-child(3),
-.form-contact .form-group:nth-child(4),
-.form-contact .form-group:nth-child(5) {
+
+.form-group:nth-child(3),
+.form-group:nth-child(4),
+.form-group:nth-child(5) {
     width: 100%;
 }
-.form-contact .form-group .form-control {
+
+.form-group .form-control {
     width: 100%;
     border-radius: 18px;
     border: 2px solid var(--red);
     margin: 10px 40px 5px 0;
 }
-.form-contact .form-group input {
+
+.form-group input {
     height: 35px;
     outline: none;
     padding: 10px;
 }
-.form-contact textarea {
+
+textarea {
     height: 100px;
     outline: none;
     padding: 10px;
 }
-.form-contact input[type="submit"] {
+
+input[type="submit"] {
     background-color: var(--red);
     width: 100%;
     color: white;
@@ -419,9 +427,11 @@ a {
     border: none;
     cursor: pointer;
 }
-.form-contact input[type="submit"]:hover {
+
+input[type="submit"]:hover {
     background-color: var(--lightred);
 }
+
 .contact-us .contact h3 {
     margin: 20px 0;
     text-align: center;

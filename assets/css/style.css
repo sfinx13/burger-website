@@ -224,6 +224,11 @@ a {
     flex: 1 0 auto;
 }
 
+.header-topbar h1:hover {
+    transform: translate(600px, 0);
+    transition: 2s;
+}
+
 .header-topbar h1::first-letter {
     font-size: 3rem;
     color: var(--red);
@@ -346,6 +351,7 @@ a {
     padding-bottom: 1rem;
     transition: transform ease-in-out 0.3s;
     cursor: pointer;
+    background-color: var(--white);
 }
 
 .product:hover {

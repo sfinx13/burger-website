@@ -1,0 +1,25 @@
+name: Build and deploy to github page
+
+on: 
+  push: 
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntut-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+    
+      - name: Deploy to GitHub Page
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: main
+          folder: dist

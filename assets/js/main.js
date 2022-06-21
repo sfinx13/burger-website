@@ -1,27 +1,12 @@
-function writeCurrentYear() {
-    document.querySelector('.footer p span').innerHTML = '2020 - ' + new Date().getFullYear();
-}
-
-function sendRequest(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-}
+import { writeCurrentYear, sendRequest } from './utils.js'
+import './../css/style.css';
+import './../css/animation.css';
+import './../../index.html';
 
 window.addEventListener('DOMContentLoaded', () => {
     writeCurrentYear();
 
     const form = document.getElementById('form-contact');
-    const button = document.getElementById('form-contact-button');
     const status = document.getElementById('form-contact-status');
 
     function success() {
@@ -43,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        var data = new FormData(form);
+        let data = new FormData(form);
         sendRequest(form.method, form.action, data, success, error);
     });
 
